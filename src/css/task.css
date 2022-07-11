@@ -1,0 +1,38 @@
+.Normal{
+    color: black;
+    background-color: gainsboro;
+    border: 2px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.Bloqueante{
+    color: white;
+    background-color: blue;
+    border: 2px solid blue;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.Urgente{
+    color: white;
+    background-color: red;
+    border: 2px solid red;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.bi{
+    padding: 5px;
+    font-size: x-large;
+}
+
+.td-green{
+    color: green;
+    text-decoration: line-through;
+}
+
+.td-red{
+    color: red;
+
+}

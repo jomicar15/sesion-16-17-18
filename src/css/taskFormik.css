@@ -1,0 +1,30 @@
+.formik{
+    border: 3px solid black;
+    padding: 10px;
+    background-color: antiquewhite;
+}
+
+h4{
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+Form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#my-radio-group{
+    font-weight: bold;
+}
+
+label{
+    font-weight: bold;
+    padding:5px;
+}
+
+.error{
+    color: red;
+}
