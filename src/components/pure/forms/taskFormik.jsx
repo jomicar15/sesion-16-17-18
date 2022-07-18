@@ -31,9 +31,11 @@ const TaskFormik = ({addTask}) => {
                 //     alert(JSON.stringify(values, null, 2));
                 // }
                 onSubmit={values => {
-                    addTask(values);
-                }
-                
+                        addTask(values);
+                        values.title = "";
+                        values.description = "";
+                        values.priority = "";
+                    }
                 }
             >
                 { props => {
@@ -46,13 +48,13 @@ const TaskFormik = ({addTask}) => {
                     return(
                         <Form>
                         <label htmlFor="title">Título</label>
-                        <Field id="title" name="title" placeholder="Ingrese titulo" />
+                        <Field className='input' id="title" name="title" placeholder="Ingrese titulo" />
                         {
                             errors.title && touched.title && (<div className="error"><ErrorMessage name="title"/></div>)
                         }
 
                         <label htmlFor="description">Descripción</label>
-                        <Field id="description" name="description" placeholder="Ingrese descripcion" />
+                        <Field className='input' id="description" name="description" placeholder="Ingrese descripcion" />
                         {
                             errors.description  && touched.description && (<div className="error"><ErrorMessage name="description"/></div>)
                         }
@@ -74,7 +76,7 @@ const TaskFormik = ({addTask}) => {
                         {
                             errors.priority && (<div className="error"><ErrorMessage name="priority"/></div>)
                         }
-                        <button type="submit">Submit</button>
+                        <button className="btnAgregar" type="submit">Agregar</button>
                     </Form>
                     )
                 }}

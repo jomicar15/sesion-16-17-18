@@ -2,6 +2,8 @@
     border: 3px solid black;
     padding: 10px;
     background-color: antiquewhite;
+    border-radius: 10px 10px;
+
 }
 
 h4{
@@ -27,4 +29,12 @@ label{
 
 .error{
     color: red;
+}
+.btnAgregar{
+    border-radius: 15px 15px;
+}
+
+.input{
+    border-radius: 30px 30px;
+    padding: 8px;
 }

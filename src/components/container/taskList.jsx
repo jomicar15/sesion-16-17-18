@@ -36,6 +36,7 @@ const TaskList = () => {
         const listModified = [...tasks];
         listModified.push(new TaskClass(task.title,task.description,false,task.priority));
         setTasks(listModified);
+        setAggTask(false);// modificando
     }
 
     return (
@@ -73,12 +74,11 @@ const TaskList = () => {
 
         }
             
-            <button onClick={()=>setAggTask(true)}>Añadir tarea</button>
+            <button className="btnAggTask" onClick={()=>setAggTask(true)}>Añadir tarea</button>
             {
                 aggTask && <TaskFormik addTask = {addTask}></TaskFormik>
             }
             
-
         </div>
 
     );
