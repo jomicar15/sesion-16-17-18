@@ -1,7 +1,7 @@
 import { Formik, Form, Field , ErrorMessage} from "formik";
 import React from "react";
 import * as Yup from 'yup';
-import {useNavigate} from 'react-router-dom';
+import {useNavigate,Link} from 'react-router-dom';
 
 const formSchema = Yup.object().shape(
     {
@@ -118,6 +118,7 @@ const RegisterFormik = () => {
                         }
 
                         <button className="btnAgregar" type="submit">Registrar</button>
+                        <Link to='/login' >Iniciar sesión</Link>
                         
                     </Form>
                     )

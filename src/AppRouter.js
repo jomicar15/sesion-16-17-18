@@ -21,9 +21,9 @@ function App() {
           <h1>TaskList</h1>
           <Routes>
             <Route exact path='/' element={islogged ? (<HomePage/>) : (<LoginPage loggin={loggin}/>) }/>
-            <Route exact path='/task-list' element={islogged ? (<TaskList/>) : (<LoginPage loggin={loggin}/>) }/>
-            <Route exact path='/login' element={islogged ? (<HomePage/>) : (<LoginPage loggin={loggin}/>)}/>
-            <Route exact path='/register' element={<RegisterPage/>}/>
+            <Route path='/task-list' element={islogged ? (<TaskList/>) : (<LoginPage loggin={loggin}/>) }/>
+            <Route path='/login' element={islogged ? (<HomePage/>) : (<LoginPage loggin={loggin}/>)}/>
+            <Route path='/register' element={<RegisterPage/>}/>
             <Route path="*" element={<NotFound/>} />
           </Routes>
       </Router> 
