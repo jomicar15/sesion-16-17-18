@@ -1,7 +1,9 @@
 import { Formik, Form, Field , ErrorMessage} from "formik";
-import {Link} from 'react-router-dom';
+import {Link,useNavigate} from 'react-router-dom';
 import React,{useState} from "react";
 import * as Yup from 'yup';
+
+
 
 const formSchema = Yup.object().shape(
     {
@@ -11,6 +13,7 @@ const formSchema = Yup.object().shape(
 )
 
 const TaskFormik = ({loggin}) => {
+    let navigate = useNavigate();
     const [errorLoggin, setErrorLoggin] = useState('');
     const BBDD = [
         {
@@ -26,11 +29,14 @@ const TaskFormik = ({loggin}) => {
     const compare = (values)=> {        
         //buscando elemento en la base de datos
         const user = BBDD.find( (item) => item.username===values.username);
+        //console.log("entrando al compare",user);
         if(user === undefined){
             setErrorLoggin('usuario o contraseña incorrecto');
         }else if (user !== undefined){
             if(values.password === user.password){
                 loggin();
+                //probando mandar a la página raíz para resetear la url
+                navigate('/');
             }else{
                 setErrorLoggin('usuario o contraseña incorrecto');
             }

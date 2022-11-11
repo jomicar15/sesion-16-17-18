@@ -4,8 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const HomePage =()=> {
     let navigate = useNavigate();
-
-
+    
     return (
         <div>
             <h1>HOMEPAGE</h1>
